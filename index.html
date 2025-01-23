@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class = "top">hello</div>
+<label>Choose a number up to 100 <input></label>
+<button onclick = "makeSqares()">new grid</button>
 
 <div class = "container"></div>
 
 
 
     <script>
-
-        userInput = 17
+        let userInput = 0;
+        
     function makeSqares() {
+        const input = document.querySelector("input")
+        userInput = input.value;
         for (let i = 0; i < userInput * userInput; i++) {
     const container = document.querySelector(".container");
     const sq = document.createElement("div");
@@ -33,6 +36,8 @@
     container.appendChild(sq);
     
     }
+
+
     // document.querySelectorAll(".sq", ".container")
     
 }
