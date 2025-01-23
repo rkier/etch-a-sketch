@@ -14,16 +14,18 @@
 
 
     <script>
+
+        userInput = 17
     function makeSqares() {
-        for (let i = 0; i < 16 * 16; i++) {
+        for (let i = 0; i < userInput * userInput; i++) {
     const container = document.querySelector(".container");
     const sq = document.createElement("div");
       
     sq.classList.add("sq");
     
    // sq.style.border = "1px solid black";
-    sq.style.width = "20px";
-    sq.style.height = "20px";
+    sq.style.width = (960 /userInput) + "px";
+    sq.style.height = (960/ userInput) + "px";
     sq.addEventListener( "mouseover", () => {
         sq.style.backgroundColor = "blue";
     });
