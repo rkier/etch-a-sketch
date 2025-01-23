@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class = "top">hello</div>
+
+<div class = "container"></div>
+
+
+
+    <script>
+    function makeSqares() {
+        for (let i = 0; i < 16 * 16; i++) {
+    const container = document.querySelector(".container");
+    const sq = document.createElement("div");
+      
+    sq.classList.add("sq");
+    
+   // sq.style.border = "1px solid black";
+    sq.style.width = "20px";
+    sq.style.height = "20px";
+    sq.addEventListener( "mouseover", () => {
+        sq.style.backgroundColor = "blue";
+    });
+    
+    container.appendChild(sq);
+    
+    }
+    // document.querySelectorAll(".sq", ".container")
+    
+}
+
+    makeSqares();
+
+    
+    </script>
+</body>
+</html>
