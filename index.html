@@ -16,12 +16,14 @@
 
     <script>
         let userInput = 0;
-        
+        const container = document.querySelector(".container");
     function makeSqares() {
+        container.replaceChildren();
         const input = document.querySelector("input")
         userInput = input.value;
         for (let i = 0; i < userInput * userInput; i++) {
-    const container = document.querySelector(".container");
+    
+    
     const sq = document.createElement("div");
       
     sq.classList.add("sq");
@@ -32,7 +34,7 @@
     sq.addEventListener( "mouseover", () => {
         sq.style.backgroundColor = "blue";
     });
-    
+   
     container.appendChild(sq);
     
     }
@@ -41,7 +43,7 @@
     // document.querySelectorAll(".sq", ".container")
     
 }
-
+    //container.replaceChildren(makeSqares());
     makeSqares();
 
     
